@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WotApi</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="content-wrap">
+        <form action="/main/player/" method="post" class="player-form">
+            <h2 class="headers first-head">Player stats</h2>
+            <div class="player-input">
+                <p>Nickname</p>
+                <input type="text" id="nickname" name="nickname" required>
+                <button type="submit" class="sub-btn">
+                    Search
+                </button>
+            </div>
+        </form>
+        <form action="/main/tanks_list/" method="post" class="tank-form">
+            <h2 class="headers">Tank details</h2>
+            <div class="form-wrap">
+                <div>
+                    <p>Nation</p>
+                    <select name="nation" id="nation">
+                        <option value="none">None</option>
+                        <option value="germany">Germany</option>
+                        <option value="ussr">U.S.S.R.</option>
+                        <option value="usa">U.S.A.</option>
+                        <option value="france">France</option>
+                        <option value="uk">U.K.</option>
+                        <option value="china">China</option>
+                        <option value="japan">Japan</option>
+                        <option value="czechoslovakia">Czechoslovakia</option>
+                        <option value="poland">Poland</option>
+                        <option value="sweden">Sweden</option>
+                        <option value="italy">Italy</option>
+                    </select>
+                </div>
+
+                <div>
+                    <p>Tier</p>
+                    <select name="tier" id="tier">
+                        <option value="none">None</option>
+                        <option value="1">I</option>
+                        <option value="2">II</option>
+                        <option value="3">III</option>
+                        <option value="4">IV</option>
+                        <option value="5">V</option>
+                        <option value="6">VI</option>
+                        <option value="7">VII</option>
+                        <option value="8">VIII</option>
+                        <option value="9">IX</option>
+                        <option value="10">X</option>
+                    </select>
+                </div>
+
+                <div>
+                    <p>Type</p>
+                    <select name="tank_type" id="tank_type">
+                        <option value="none">None</option>
+                        <option value="lightTank">Light Tank</option>
+                        <option value="mediumTank">Medium Tank</option>
+                        <option value="heavyTank">Heavy Tank</option>
+                        <option value="AT-SPG">Tank Destroyer</option>
+                        <option value="SPG">SPG</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="sub-btn">
+                Search
+            </button>
+        </form>
+
+        <div class="useless-fact">
+            <h2 class="headers">{{ random_fact }}</h2>
+            <form action="/main/" method="post">
+                <button type="submit">Random fact</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

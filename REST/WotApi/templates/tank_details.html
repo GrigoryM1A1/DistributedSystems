@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css" type="text/css">
+    <title>WotApi</title>
+</head>
+<body>
+    <form action="/main/" method="get">
+        <button type="submit" class="back-btn">Back to start</button>
+    </form>
+    <div class="tank-card-details">
+        <img src={{ tank.tank_img_url }} alt="Tank image">
+        <h3>Name: {{ tank.name }}</h3>
+        <p>{{ tank.description }}</p>
+        <h3>Basic info:</h3>
+        <p>Type: {{ tank.type }}</p>
+        <p>Nation: {{ tank.nation }}</p>
+        <p>Tier: {{ tank.tier }}</p>
+        <p>Health points: {{ tank.hp }}</p>
+        <p>Top speed: {{ tank.speed_forward }}</p>
+        <p>Top speed backwards: {{ tank.speed_backward }}</p>
+        <div class="gun-card">
+            <h3>Gun parameters:</h3>
+            <p>Name: {{ tank.canon.name }}</p>
+            <p>Caliber: {{ tank.canon.caliber }}</p>
+            <p>Dispersion: {{ tank.canon.dispersion }} per 100m</p>
+            <p>Reload time: {{ tank.canon.reload_time }}s</p>
+            <p>Aiming time: {{ tank.canon.aim_time }}s</p>
+            <p>Gun depression: {{ tank.canon.move_down_arc }} degrees</p>
+            <p>Gun elevationL {{ tank.canon.move_up_arc }} degrees</p>
+            <div class="ammo-card">
+                <h4>Basic ammunition parameters (min / avg / max):</h4>
+                <p>Damage: ({{ tank.base_ammo.min_pen }} / {{ tank.base_ammo.avg_pen }} / {{ tank.base_ammo.max_pen }}) health points</p>
+                <p>Penetration: ({{ tank.base_ammo.min_dmg }} / {{ tank.base_ammo.avg_dmg }} / {{ tank.base_ammo.max_dmg }}) millimeters</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

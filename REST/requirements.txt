@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+jinja2
+pydantic
+requests
+python-multipart
+httpx
+fastapi-login

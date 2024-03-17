@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WotApi</title>
+    <link rel="stylesheet" href="../static/styles.css" type="text/css">
+</head>
+<body>
+    <form action="/main/" method="get">
+        <button type="submit" class="back-btn">Back to start</button>
+    </form>
+
+    <div class="tanks-wrap">
+        {% for tank in tanks %}
+            <form action={{ tank.action }} method="post" class="tank-card">
+                <img src={{ tank.tank_img_url }} alt="Tank image">
+                <h3>Name: {{ tank.name }}</h3>
+                <p>Type: {{ tank.type }}</p>
+                <p>Nation: {{ tank.nation }}</p>
+                <p>Tier: {{ tank.tier }}</p>
+                <input type="hidden" name="tank_name" value="{{ tank.name }}">
+                <input type="hidden" name="tank_type" value={{ tank.tank_type }}>
+                <input type="hidden" name="nation" value={{ tank.nation }}>
+                <input type="hidden" name="tier" value={{ tank.tier }}>
+                <input type="hidden" name="tank_img_url" value="{{ tank.tank_img_url }}">
+                <input type="hidden" name="description" value="{{ tank.description }}">
+                <button type="submit">
+                    Details
+                </button>
+            </form>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player stats</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <form action="/main/" method="get">
+        <button type="submit" class="back-btn">Back to start</button>
+    </form>
+    <div class="player-wrap">
+        <h2 class="player-header">Nickname: {{ player_data.nickname }}</h2>
+
+        <div class="stats-wrap">
+            <p><span class="stats">Account created on: </span>{{ player_data.created_at }}</p>
+            <p><span class="stats">Number of battles: </span>{{ player_data.battles }}</p>
+            <p><span class="stats">Wins: </span>{{ player_data.wins }}</p>
+            <p><span class="stats">Losses: </span>{{ player_data.losses }}</p>
+            <p><span class="stats">Draws: </span>{{ player_data.draws }}</p>
+            <p><span class="stats">Wins percentage: </span>{{ player_data.wins_percents }}%</p>
+            <p><span class="stats">Average damage dealt: </span>{{ player_data.avg_dmg }}</p>
+            <p><span class="stats">Average assist by spot: </span>{{ player_data.avg_dmg_assist_radio }}</p>
+            <p><span class="stats">Average assist by track: </span>{{ player_data.avg_dmg_assist_track }}</p>
+            <p><span class="stats">Average blocked damage: </span>{{ player_data.avg_dmg_blocked }}</p>
+            <p><span class="stats">Average xp per battle: </span>{{ player_data.battle_avg_xp }}</p>
+            <p><span class="stats">Hits percentage: </span>{{ player_data.hits_percents }}%</p>
+            <p><span class="stats">Total frags: </span>{{ player_data.frags }}</p>
+            <p><span class="stats">Maximum number of frags in a battle: </span>{{ player_data.max_frags }}</p>
+            <p><span class="stats">Maximum amount of xp in a battle: </span>{{ player_data.max_xp }}</p>
+        </div>
+        <h2 class="player-header">Personal rating: {{ player_data.personal_rating }}</h2>
+    </div>
+</body>
+</html>

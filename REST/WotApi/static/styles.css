@@ -1,0 +1,175 @@
+/* Resetowanie domyślnych stylów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Przyciski */
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Przyciski powrotu */
+.back-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.back-btn:hover {
+    background-color: #c82333;
+}
+
+/* Kontener zawartości */
+.content-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Formularze */
+.player-form,
+.tank-form {
+    margin-bottom: 20px;
+}
+
+/* Nagłówki */
+.headers {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.first-head {
+    margin-top: 0;
+}
+
+/* Pola formularzy */
+.player-input p,
+.form-wrap p {
+    margin-bottom: 5px;
+}
+
+.player-input input,
+.form-wrap select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Karty z danymi gracza */
+.player-wrap,
+.tank-card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tank-card {
+    max-width: 200px;
+}
+
+.player-header,
+.tank-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.stats-wrap p,
+.tank-card p {
+    margin-bottom: 5px;
+}
+
+.stats-wrap p span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Komunikat o błędzie */
+.error-header {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #dc3545;
+}
+
+.error {
+    margin-bottom: 20px;
+    color: #dc3545;
+}
+
+
+/* Karty z danymi czołgu */
+.tanks-wrap {
+    display: flex; /* Ustawienie elementów w linii */
+    flex-wrap: wrap; /* Dopuszczenie zawijania na nowej linii, gdy brakuje miejsca */
+    justify-content: space-between; /* Rozłożenie elementów równomiernie po kontenerze */
+}
+
+/* Ustawienie marginesów między kartami czołgów */
+.tank-card {
+    flex: 0 0 calc(33.33% - 20px); /* Ustawienie szerokości karty czołgu na 1/3 kontenera z odstępami */
+    margin-bottom: 20px;
+}
+
+
+/* Kontener dla szczegółów czołgu */
+.tank-card-details {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 25%;
+}
+
+/* Obrazek czołgu */
+.tank-card-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Nagłówki i opisy */
+.tank-card-details h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.tank-card-details p {
+    margin-bottom: 5px;
+}
+
+/* Karty z parametrami broni */
+.gun-card {
+    margin-top: 15px;
+}
+
+/* Karty z parametrami amunicji */
+.ammo-card {
+    margin-top: 10px;
+    padding-left: 20px; /* Aby wyrównać do karty z parametrami broni */
+}
+
+/* Nagłówki karty z parametrami amunicji */
+.ammo-card h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
